@@ -1,5 +1,6 @@
 import Fastify from 'fastify';
 import { prismaPlugin } from './infra/db/database';
+import { authHandler } from './modules/auth/handler';
 
 //
 // Create Fastify instance
@@ -22,6 +23,8 @@ app.get('/health', function (req, res) {
     message: 'Ping!',
   });
 });
+
+app.register(authHandler, { prefix: '/auth' });
 
 //
 // Init Fastify
