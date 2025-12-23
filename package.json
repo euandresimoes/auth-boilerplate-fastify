@@ -1,5 +1,5 @@
 {
-  "name": "payments-api",
+  "name": "auth-boilerplate-fastify",
   "module": "src/server.ts",
   "type": "module",
   "private": true,
