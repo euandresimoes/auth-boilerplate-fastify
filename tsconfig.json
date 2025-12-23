@@ -26,6 +26,6 @@
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false,
 
-    "typeRoots": ["src/types/**/*"]
+    "typeRoots": ["src/shared/types/**/*"]
   }
 }

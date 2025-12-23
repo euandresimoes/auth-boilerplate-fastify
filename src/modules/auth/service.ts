@@ -1,5 +1,5 @@
-import type { ApiResponse } from '../../models/api-response';
-import type { AuthModel } from './model';
+import type { ApiResponse } from '../../shared/models/api-response';
+import type { AuthModel, RequestUser } from './model';
 import { repository } from './repository';
 
 export const service = {
@@ -10,4 +10,8 @@ export const service = {
   async login(data: AuthModel): Promise<ApiResponse> {
     return repository.login(data);
   },
+
+  async profile(data: RequestUser): Promise<ApiResponse> {
+    return repository.profile(data);
+  }
 };
